@@ -1,0 +1,16 @@
+<template name="assetCloudUpload">
+  <div id="assetCloudUpload">
+    <div class="form-group file-upload">
+      <label for="assetCloud" class="btn btn-default">
+        Choose file
+        <input class="hidden" id="assetCloud" file-input="file" type="file" accept="*">
+        <input type="hidden" id="assetFile" name="file" required="" data-schema-key="file" value="{{value}}">
+        <input type="hidden" id="assetType" name="assetType" data-schema-key="assetType">
+        <input type="hidden" id="imageWidth" name="imageWidth" data-schema-key="imageWidth">
+        <input type="hidden" id="imageHeight" name="imageHeight" data-schema-key="imageHeight">
+      </label>
+      <span id="filename"></span>
+    </div>    
+    <img id="previewImage" src="{{previewurl value}}"/>
+  </div>
+</template>

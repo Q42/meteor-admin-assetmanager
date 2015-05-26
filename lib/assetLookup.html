@@ -1,15 +1,13 @@
 <template name="afAssetLookup">
-  <div id="{{scope this.name}}-lookup">
-    <a data-toggle="modal" scope="{{scope this.name}}-lookup" href="#assetlookup">Selecteer een asset</a>
-    <input type="hidden" name="{{this.name}}" {{atts}} value="{{value}}"/>
+  <div id="{{lookupId}}">
+    <a data-toggle="modal" scope="{{lookupId}}" href="#assetlookup">Kies een bestand</a>
 
-    <img class="assetpreview" src="{{value}}"/>
-
-    {{#with asset value}}
+    <input type="hidden" name="{{this.name}}" {{atts}} value="{{currentValue}}"/>
+    {{#with currentAsset}}
 
       <div class="asset-chosen">
         {{#if isImage this.assetType}}
-          <img class="assetpreview" src="{{file}}"/>
+          <img class="assetpreview" src="{{ preview this }}"/>
         {{else}}
           <div class="icon-box">
             <span class="icon">
@@ -32,7 +30,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4 class="modal-title">Selecteer een Asset</h4>
+          <h4 class="modal-title">Selecteer een bestand</h4>
         </div>
           <ul>
             {{#each assets}}
@@ -42,7 +40,7 @@
                 </span>
 
                 <span class="imagecontainer">
-                  <img file="{{this.file}}" src="{{this.file}}"/>
+                  <img file="{{_id}}" src="{{file}}"/>
                   <!--{{#if isImage this.assetType}}-->
                     <!--<img file="{{this.file}}" src="{{this.file}}"/>-->
                   <!--{{else}}-->

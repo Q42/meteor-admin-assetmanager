@@ -35,13 +35,13 @@ Package.onUse(function(api) {
   api.addFiles([
     'lib/assetCloudUpload.html',
     'lib/assetCloudUpload.js',
-    'lib/assetCloudUpload.styl',
+    'lib/assetCloudUpload.css',
     'lib/assetLookup.html',
     'lib/assetLookup.js',
-    'lib/assetLookup.styl',
+    'lib/assetLookup.css',
     'lib/assetmanager.html',
     'lib/assetmanager.js',
-    'lib/assetmanager.styl'
+    'lib/assetmanager.css'
   ], 'client');
 
 

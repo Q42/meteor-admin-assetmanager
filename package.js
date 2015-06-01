@@ -1,9 +1,8 @@
 Package.describe({
   name: 'q42:meteor-admin-assetmanager',
-  version: '0.0.1',
+  version: '0.1.0',
   // Brief, one-line summary of the package.
-  summary: '',
-  // URL to the Git repository containing the source code for this package.
+  summary: 'assetmanager for meteor admin',
   git: '',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
@@ -12,10 +11,10 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.use('aldeed:autoform');
-  api.use('aldeed:simple-schema');
+  api.use('aldeed:autoform@4.2.2');
+  api.use('aldeed:simple-schema@1.3.3');
 
-  api.use('edgee:slingshot');
+  api.use('edgee:slingshot@0.6.3');
 
   api.use('blaze');
   api.use('spacebars');
@@ -52,5 +51,4 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('q42:meteor-admin-assetmanager');
-  api.addFiles('meteor-admin-assetmanager-tests.js');
 });

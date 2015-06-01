@@ -1,0 +1,63 @@
+.asset-chosen .icon-box {
+  width: 150px;
+  height: 150px;
+  background-color: #444;
+  font-size: 50px;
+  color: #fff;
+  line-height: 150px;
+  text-align: center;
+}
+.asset-chosen img.assetpreview {
+  max-width: 200px;
+  max-height: 150px;
+  display: block;
+  margin-top: 10px;
+}
+#assetlookup {
+  border: 1px solid #0f0;
+}
+#assetlookup .modal-dialog {
+  width: 640px;
+}
+#assetlookup ul {
+  margin: 10px 5px 5px 10px;
+  padding: 0;
+}
+#assetlookup ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 5px 5px 0;
+  padding: 5px;
+  background-color: #eee;
+  cursor: pointer;
+}
+#assetlookup ul li .titlelabel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 5px;
+  background-color: #eee;
+  width: 100%;
+  opacity: 0.6;
+  font-weight: bold;
+}
+#assetlookup ul li .titlelabel .title {
+  color: #000;
+}
+#assetlookup ul li .imagecontainer {
+  width: 200px;
+  line-height: 148px;
+  text-align: center;
+  display: inline-block;
+  background: #444;
+  height: 150px;
+  margin: -5px -5px 0 -5px;
+}
+#assetlookup ul li .imagecontainer .icon i {
+  color: #f6f6f6;
+  font-size: 50px;
+}
+#assetlookup ul li .imagecontainer img {
+  max-width: 200px;
+  max-height: 150px;
+}

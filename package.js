@@ -1,11 +1,10 @@
 Package.describe({
   name: 'q42:meteor-admin-assetmanager',
-  version: '0.1.0',
-  // Brief, one-line summary of the package.
-  summary: 'assetmanager for meteor admin',
-  git: '',
-  // By default, Meteor will default to using README.md for documentation.
-  // To avoid submitting documentation, set this field to null.
+  version: '0.1.1',
+
+  summary: 'Asset manager for Meteor Admin',
+  git: 'https://github.com/Q42/meteor-admin-assetmanager',
+
   documentation: 'README.md'
 });
 
@@ -34,13 +33,13 @@ Package.onUse(function(api) {
   api.addFiles([
     'lib/assetCloudUpload.html',
     'lib/assetCloudUpload.js',
-    'lib/assetCloudUpload.styl',
+    'lib/assetCloudUpload.css',
     'lib/assetLookup.html',
     'lib/assetLookup.js',
-    'lib/assetLookup.styl',
+    'lib/assetLookup.css',
     'lib/assetmanager.html',
     'lib/assetmanager.js',
-    'lib/assetmanager.styl'
+    'lib/assetmanager.css'
   ], 'client');
 
 

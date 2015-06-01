@@ -12,8 +12,8 @@ AssetManager.SetGoogleSecretKey = function(key) {
 
 
     Slingshot.fileRestrictions("google-cloud", {
-        allowedFileTypes: ["image/png", "image/jpeg", "image/gif", "audio/mpeg", "audio/mp3"],
-        maxSize: null//10 * 1024 * 1024 // 10 MB (use null for unlimited)
+        allowedFileTypes: ["image/png", "image/jpeg", "image/gif", "audio/mpeg", "audio/mp3", "video/mp4"],
+        maxSize: 25 * 1024 * 1024 // 10 MB (use null for unlimited)
     });
 
     Slingshot.createDirective("google-cloud", Slingshot.GoogleCloud, {

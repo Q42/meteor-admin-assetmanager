@@ -1,6 +1,6 @@
 Package.describe({
   name: 'q42:meteor-admin-assetmanager',
-  version: '0.1.2',
+  version: '0.1.3',
 
   summary: 'Asset manager for Meteor Admin',
   git: 'https://github.com/Q42/meteor-admin-assetmanager',
@@ -35,7 +35,6 @@ Package.onUse(function(api) {
     'lib/assetCloudUpload.js',
     'lib/assetCloudUpload.css',
     'lib/assetLookup.html',
-    'lib/assetLookup.js',
     'lib/assetLookup.css',
     'lib/assetmanager.html',
     'lib/assetmanager.js',

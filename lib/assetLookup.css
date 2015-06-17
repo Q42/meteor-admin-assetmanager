@@ -13,9 +13,7 @@
   display: block;
   margin-top: 10px;
 }
-#assetlookup {
-  border: 1px solid #0f0;
-}
+
 #assetlookup .modal-dialog {
   width: 640px;
 }

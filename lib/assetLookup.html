@@ -34,13 +34,13 @@
         </div>
           <ul>
             {{#each assets}}
-              <li>
+              <li file="{{_id}}">
                 <span class="titlelabel">
                   <span class="title">{{this.title}}</span>
                 </span>
 
                 <span class="imagecontainer">
-                  <img file="{{_id}}" src="{{file}}"/>
+                  <img  src="{{file}}"/>
                   <!--{{#if isImage this.assetType}}-->
                     <!--<img file="{{this.file}}" src="{{this.file}}"/>-->
                   <!--{{else}}-->

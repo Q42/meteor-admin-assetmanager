@@ -2,11 +2,6 @@
 
 AssetManager = AssetManager || {};
 
-if (!Meteor.settings.GoogleAccessId || Meteor.settings.GoogleAccessId.length < 1) {
-    console.error("You're missing the GoogleAccessId setting in the settings (typically /settings/dev-cms.json)");
-}
-
-
 AssetManager.SetGoogleSecretKey = function(key) {
     Slingshot.GoogleCloud.directiveDefault.GoogleSecretKey = key
 
@@ -35,6 +30,6 @@ AssetManager.SetGoogleSecretKey = function(key) {
         }
     });
 
-}
+};
 
 

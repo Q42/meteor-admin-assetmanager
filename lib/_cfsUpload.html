@@ -1,4 +1,4 @@
-<template name="assetCloudUpload">
+<template name="cfsUpload">
   <div id="assetCloudUpload">
     <div class="form-group file-upload">
       <label for="assetCloud" class="btn btn-default">
@@ -11,6 +11,6 @@
       </label>
       <span id="filename"></span>
     </div>
-    <img id="previewImage" src="{{previewurl value}}"/>
+    <img src={{file.url}} />
   </div>
 </template>

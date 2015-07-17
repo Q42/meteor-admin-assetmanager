@@ -13,12 +13,17 @@ Package.onUse(function(api) {
   api.use('aldeed:autoform@4.2.2');
   api.use('aldeed:simple-schema@1.3.3');
 
+
+  api.use('cfs:standard-packages');
+  api.use('cfs:gridfs');
+
   api.use('edgee:slingshot@0.6.3');
 
   api.use('blaze');
   api.use('spacebars');
   api.use('templating');
   api.use('reactive-var');
+  api.use('tracker');  
   api.use('mongo');
 
   api.addFiles([
@@ -31,6 +36,8 @@ Package.onUse(function(api) {
   ], 'server');
 
   api.addFiles([
+    'lib/_cfsUpload.html',
+    'lib/_cfsUpload.js',
     'lib/assetCloudUpload.html',
     'lib/assetCloudUpload.js',
     'lib/assetCloudUpload.css',
@@ -41,8 +48,9 @@ Package.onUse(function(api) {
     'lib/assetmanager.css'
   ], 'client');
 
-
+  api.export('createCfsSchema');
   api.export('createAssetSchema');
+  api.export('FS');
   api.export('AssetManager');
 });
 

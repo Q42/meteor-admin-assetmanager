@@ -1,6 +1,6 @@
 Package.describe({
   name: 'q42:meteor-admin-assetmanager',
-  version: '0.1.7',
+  version: '0.2.0',
 
   summary: 'Asset manager for Meteor Admin',
   git: 'https://github.com/Q42/meteor-admin-assetmanager',
@@ -14,8 +14,8 @@ Package.onUse(function(api) {
   api.use('aldeed:simple-schema@1.3.3');
 
 
-  api.use('cfs:standard-packages');
-  api.use('cfs:gridfs');
+  api.use('cfs:standard-packages@0.0.2');
+  api.use('cfs:gridfs@0.0.0');
 
   api.use('edgee:slingshot@0.6.3');
 
@@ -23,7 +23,7 @@ Package.onUse(function(api) {
   api.use('spacebars');
   api.use('templating');
   api.use('reactive-var');
-  api.use('tracker');  
+  api.use('tracker');
   api.use('mongo');
 
   api.addFiles([

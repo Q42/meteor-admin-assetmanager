@@ -59,3 +59,10 @@
   max-width: 200px;
   max-height: 150px;
 }
+
+#assetlookup ul li .imagecontainer audio {
+  position: absolute;
+  bottom: 31px;
+  left: 0;
+  max-width: 200px;
+}

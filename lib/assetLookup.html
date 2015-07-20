@@ -9,17 +9,21 @@
         {{#if isImage this.assetType}}
           <img class="assetpreview" src="{{ preview this }}"/>
         {{else}}
-          <div class="icon-box">
-            <span class="icon">
-              <i class="fa fa-{{assetIcon this.assetType}}"></i>
-            </span>
-          </div>
+          {{#if isAudio assetType}}
+            <audio src="{{file}}" controls ></audio>
+          {{else}}
+            <div class="icon-box">
+              <span class="icon">
+                <i class="fa fa-{{assetIcon this.assetType}}"></i>
+              </span>
+            </div>
+          {{/if}}
         {{/if}}
       </div>
 
     {{/with}}
 
-    
+
   </div>
 </template>
 
@@ -40,14 +44,18 @@
                 </span>
 
                 <span class="imagecontainer">
-                  <img  src="{{file}}"/>
-                  <!--{{#if isImage this.assetType}}-->
-                    <!--<img file="{{this.file}}" src="{{this.file}}"/>-->
-                  <!--{{else}}-->
-                    <!--<span class="icon">-->
-                      <!--<i class="fa fa-{{assetIcon this.assetType}}"></i>-->
-                    <!--</span>-->
-                  <!--{{/if}}-->
+
+                  {{#if isImage assetType}}
+                    <img  src="{{file}}"/>
+                  {{else}}
+
+                  {{#if isAudio assetType}}
+                    <audio src="{{file}}" controls ></audio>
+                  {{/if}}
+                    <span class="icon">
+                      <i class="fa fa-{{assetIcon this.assetType}}"></i>
+                    </span>
+                  {{/if}}
 
                 </span>
               </li>

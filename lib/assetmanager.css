@@ -40,6 +40,14 @@
   max-width: 265px;
   max-height: 240px;
 }
+
+#assetList li .imagecontainer audio {
+  position: absolute;
+  bottom: 46px;
+  left: 7px;
+  max-width: 250px;
+}
+
 #assetList li .controls {
   line-height: 30px;
   width: 100%;

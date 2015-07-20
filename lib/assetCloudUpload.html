@@ -11,6 +11,17 @@
       </label>
       <span id="filename"></span>
     </div>
-    <img id="previewImage" src="{{previewurl value}}"/>
+
+    {{#if isImage}}
+      <img id="previewImage" src="{{previewurl value}}"/>
+    {{/if}}
+
+    {{#if isAudio}}
+      <audio src="{{previewurl value}}" controls ></audio>
+    {{/if}}
+
+
+
   </div>
 </template>
+

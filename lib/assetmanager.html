@@ -6,9 +6,12 @@
           {{#if isImage assetType}}
             <img src="{{file}}"/>
           {{else}}
-            <span class="icon">
-              <i class="fa fa-{{assetIcon assetType}}"></i>
-            </span>
+              {{#if isAudio assetType}}
+                <audio src="{{file}}" controls ></audio>
+              {{/if}}
+              <span class="icon">
+                <i class="fa fa-{{assetIcon assetType}}"></i>
+              </span>
           {{/if}}
         </span>
         <span class="titlelabel">
@@ -30,3 +33,4 @@
     {{/each}}
   </ul>
 </template>
+

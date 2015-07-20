@@ -18,10 +18,12 @@
           <span class="title">{{title}}</span>
         </span>
         <span class="controls">
-          <span class="assetType">type:
+          <span class="assetType">
             {{assetType}}
             {{#if isImage assetType}}
-              ({{imageWidth}} x {{imageHeight}})
+              {{#if imageWidth}}
+                ({{imageWidth}} x {{imageHeight}})
+              {{/if}}
             {{/if}}
           </span>
           <a data-toggle="modal" doc="{{_id}}" href="#admin-delete-modal" class="hidden-xs btn btn-xs btn-danger btn-delete">

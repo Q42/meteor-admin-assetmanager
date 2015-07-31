@@ -4,7 +4,7 @@
       <li>
         <span class="imagecontainer">
           {{#if isImage assetType}}
-            <img src="{{file}}"/>
+            <img src="{{ bbox _id 265 }}"/>
           {{else}}
               {{#if isAudio assetType}}
                 <audio src="{{file}}" controls ></audio>

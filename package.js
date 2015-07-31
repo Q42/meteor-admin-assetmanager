@@ -36,6 +36,7 @@ Package.onUse(function(api) {
   ], 'server');
 
   api.addFiles([
+    'lib/resize.js',
     'lib/_cfsUpload.html',
     'lib/_cfsUpload.js',
     'lib/assetCloudUpload.html',

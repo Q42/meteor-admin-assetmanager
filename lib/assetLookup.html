@@ -7,7 +7,7 @@
 
       <div class="asset-chosen">
         {{#if isImage this.assetType}}
-          <img class="assetpreview" src="{{ preview this }}"/>
+          <img class="assetpreview" src="{{ bbox _id 200 }}"/>
         {{else}}
           {{#if isAudio assetType}}
             <audio src="{{file}}" controls ></audio>
@@ -46,7 +46,7 @@
                 <span class="imagecontainer">
 
                   {{#if isImage assetType}}
-                    <img  src="{{file}}"/>
+                    <img  src="{{bbox _id 200 }}"/>
                   {{else}}
 
                   {{#if isAudio assetType}}

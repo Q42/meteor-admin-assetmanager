@@ -1,8 +1,9 @@
 <template name="afAssetLookup">
   <div id="{{lookupId}}">
     <a data-toggle="modal" scope="{{lookupId}}" href="#assetlookup">Kies een bestand</a>
-
-    <input type="hidden" name="{{this.name}}" {{atts}} value="{{currentValue}}"/>
+    |
+    <a data-action="remove-asset" style="color: red;" >verwijderen</a>
+    <input type="hidden" name="{{name}}" {{atts}} value="{{currentValue}}"/>
     {{#with currentAsset}}
 
       <div class="asset-chosen">

@@ -8,6 +8,7 @@
       <div class="asset-chosen">
         {{#if isImage this.assetType}}
           <img class="assetpreview" src="{{ bbox _id 200 }}"/>
+          <span>{{imageWidth}} x {{imageHeight}}</span>
         {{else}}
           {{#if isAudio assetType}}
             <audio src="{{file}}" controls ></audio>

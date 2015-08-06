@@ -7,7 +7,7 @@
     {{#with currentAsset}}
 
       <div class="asset-chosen">
-        {{#if isImage this.assetType}}
+        {{#if isImage assetType}}
           <img class="assetpreview" src="{{ bbox _id 200 }}"/>
           <span>{{imageWidth}} x {{imageHeight}}</span>
         {{else}}
@@ -16,7 +16,7 @@
           {{else}}
             <div class="icon-box">
               <span class="icon">
-                <i class="fa fa-{{assetIcon this.assetType}}"></i>
+                <i class="fa fa-{{assetIcon assetType}}"></i>
               </span>
             </div>
           {{/if}}
@@ -42,7 +42,7 @@
             {{#each assets}}
               <li file="{{_id}}">
                 <span class="titlelabel">
-                  <span class="title">{{this.title}}</span>
+                  <span class="title">{{title}}</span>
                 </span>
 
                 <span class="imagecontainer">
@@ -55,7 +55,7 @@
                     <audio src="{{file}}" controls ></audio>
                   {{/if}}
                     <span class="icon">
-                      <i class="fa fa-{{assetIcon this.assetType}}"></i>
+                      <i class="fa fa-{{assetIcon assetType}}"></i>
                     </span>
                   {{/if}}
 

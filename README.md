@@ -108,7 +108,7 @@ For storing assets in Google Cloud you must create a bucket and put the `GoogleC
 	}
 
 ## Contributing
-Currently the setup requires quite a bit of boilerplate code. We'd like to bring that back to the minimum w/o giving up control of the collections.	i.e. We thinks
+Currently the setup requires quite a bit of boilerplate code. We'd like to bring that back to the minimum w/o giving up control of the collections.	i.e. We think
  it's a good idea that the application creates the collections, not AssetManager. If you have some ideas about that, please let us know.
 
 Furthermore, previews for additional file types would be nice to have. Send us a PR if you'd like to help with that.

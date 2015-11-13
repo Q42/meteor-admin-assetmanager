@@ -1,6 +1,14 @@
-Meteor Admin AssetManager
-========
+# Meteor Admin AssetManager
 
+Easily upload files to [Meteor Admin (yogiben:admin)](https://github.com/yogiben/meteor-admin).
+
+### Features
+
+ * upload to either: 
+	 * [Google Cloud Storage](https://cloud.google.com/storage) (via [Slingshot](https://github.com/CulturalMe/meteor-slingshot)) or 
+	 * [Mongo GridFS](https://docs.mongodb.org/manual/core/gridfs/) (via [CollectionFS](https://github.com/CollectionFS/Meteor-CollectionFS))	
+ * asset types currently supporting preview: image, audio
+ * use the built-in asset lookup via an autoform param in your schemas
 
 
 ## Setup
@@ -13,9 +21,9 @@ Create a new schema for your assets.
 
 	Media = new Mongo.Collection('media');
 
-Create the schema (Cfs or Cloud) and attach it to the collection
+Create the schema and attach it to the collection
 
-	Schemas.Media = createCfsSchema();
+	Schemas.Media = generateSchema('cfsUpload'); // 'assetCloudUpload' for Google Cloud
 
 	Media.attachSchema(Schemas.Media);
 
@@ -69,8 +77,40 @@ Add the Media collection to Meteor Admin's config:
 
 
 
-## usage
+## Usage
+
+	
+Add an asset reference to your schema. 
+	
+	...
+	photo: {
+        type: String,
+        label: 'photo (480 x 320)',
+        optional: true,
+        autoform: {
+            type : 'assetLookup'
+        }
+    },
+    ...
+ 
 
 Retrieve the serving url of the asset. see [CollectionFS](https://github.com/CollectionFS/Meteor-CollectionFS) for options
 
-	var url = Media.findOne().url()
+	var url = Media.findOne(doc.photo).url();
+	 
+## Google Cloud
+ 
+For storing assets in Google Cloud you must create a bucket and put the `GoogleCloudBucket` and `GoogleAccessId` in your Meteor settings:   
+
+	{
+	  "GoogleAccessId": "abc123@developer.gserviceaccount.com",
+	  "GoogleCloudBucket": "my-bucket"
+	}
+
+## Contributing
+Currently the setup requires quite a bit of boilerplate code. We'd like to bring that back to the minimum w/o giving up control of the collections.	i.e. We thinks
+ it's a good idea that the application creates the collections, not AssetManager. If you have some ideas about that, please let us know.
+
+Furthermore, previews for additional file types would be nice to have. Send us a PR if you'd like to help with that.
+
+Apart from the above, we welcome any and all suggestions, and love PR's especially.

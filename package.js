@@ -10,7 +10,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.use('aldeed:autoform@4.2.2');
+  api.use('aldeed:autoform@5.5.1');
   api.use('aldeed:simple-schema@1.3.3');
 
 
@@ -56,7 +56,3 @@ Package.onUse(function(api) {
   api.export('AssetManager');
 });
 
-Package.onTest(function(api) {
-  api.use('tinytest');
-  api.use('q42:meteor-admin-assetmanager');
-});

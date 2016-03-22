@@ -107,13 +107,15 @@ For storing assets in Google Cloud you must create a bucket and put the `GoogleC
 	  "GoogleCloudBucket": "my-bucket"
 	}
 
-The bucket is simply the ID of the Google Storage bucket. For the access ID, create a service account (under permissions) with a p12 key. Download the key, then use (using the default pass google gave you, probably 'notasecret')
+The bucket is simply the ID of the Google Storage bucket. For the access ID, create a service account (under permissions) with a `p12` key. Download the key, then use (using the default pass google gave you, probably `notasecret`)
 
-  openssl pkcs12 -in yourkey.p12 -out yourkey.pem -nodes
+	openssl pkcs12 -in yourkey.p12 -out yourkey.pem -nodes
 
-To your code (server-side only) add
+To convert to a `pem` key and put this in a directory called `private` in your app.
 
-  AssetManager.SetGoogleSecretKey(Assets.getText('yourkey.pem'));
+Then, to your code (server-side only) add
+
+	AssetManager.SetGoogleSecretKey(Assets.getText('yourkey.pem'));
 
 In the google cloud storage bucket UI, add the user [your google access ID] as 'Writer' to the _bucket_ permissions, and the user 'allUsers' as 'Reader' to the _default Object permissions_.
 

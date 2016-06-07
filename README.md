@@ -23,7 +23,7 @@ Create a new schema for your assets.
 
 Create the schema and attach it to the collection
 
-	Schemas.Media = generateSchema('cfsUpload'); // 'assetCloudUpload' for Google Cloud
+	Schemas.Media = createCfsSchema(); // createAssetSchema() for Google Cloud
 
 	Media.attachSchema(Schemas.Media);
 

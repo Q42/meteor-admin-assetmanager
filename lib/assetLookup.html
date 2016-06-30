@@ -48,12 +48,11 @@
                 <span class="imagecontainer">
 
                   {{#if isImage assetType}}
-                    <img  src="{{bbox _id 200 }}"/>
+                    <img src="{{bbox _id 200 }}"/>
                   {{else}}
-
-                  {{#if isAudio assetType}}
-                    <audio src="{{file}}" controls ></audio>
-                  {{/if}}
+                    {{#if isAudio assetType}}
+                      <audio src="{{file}}" controls preload="none"></audio>
+                    {{/if}}
                     <span class="icon">
                       <i class="fa fa-{{assetIcon assetType}}"></i>
                     </span>

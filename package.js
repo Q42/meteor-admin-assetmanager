@@ -1,6 +1,6 @@
 Package.describe({
   name: 'q42:meteor-admin-assetmanager',
-  version: '1.0.3',
+  version: '1.0.4',
 
   summary: 'Asset manager for Meteor Admin',
   git: 'https://github.com/Q42/meteor-admin-assetmanager',
@@ -55,4 +55,3 @@ Package.onUse(function(api) {
   api.export('FS');
   api.export('AssetManager');
 });
-

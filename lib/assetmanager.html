@@ -7,7 +7,7 @@
             <img src="{{ bbox _id 265 }}"/>
           {{else}}
               {{#if isAudio assetType}}
-                <audio src="{{file}}" controls ></audio>
+                <audio src="{{file}}" controls preload="none"></audio>
               {{/if}}
               <span class="icon">
                 <i class="fa fa-{{assetIcon assetType}}"></i>
@@ -35,4 +35,3 @@
     {{/each}}
   </ul>
 </template>
-

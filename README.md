@@ -23,9 +23,8 @@ Create a new schema for your assets.
 
 Create the schema and attach it to the collection
 
-	Schemas.Media = generateSchema('cfsUpload'); // 'assetCloudUpload' for Google Cloud
-
-	Media.attachSchema(Schemas.Media);
+	Media.attachSchema(createCfsSchema()); // for GridFS
+  Media.attachSchema(createAssetSchema()); // for Google Cloud
 
 Create a GridFS file storage. This is a FS.Collection, not a regular Mongo.Collection.
 
@@ -36,10 +35,11 @@ Create a GridFS file storage. This is a FS.Collection, not a regular Mongo.Colle
 Once you have set it up, tell the AssetManager about your collections:
 
 	if (Meteor.isClient && !Meteor.isCordova) {
-		AssetManager.setCfsCollection(Media, FileStorage);
+		AssetManager.setCfsCollection(Media, FileStorage); // for GridFS
+    AssetManager.setAssetCollection(Media); // for Google Cloud
 	}
 
-The FileStorage also needs to have permissions set. Note there is a `download` permission now too.
+For GridFS, the FileStorage also needs to have permissions set. Note there is a `download` permission now too.
 
 	FileStorage.allow({
 		insert : () => true,
@@ -53,11 +53,9 @@ Publish both the Media collection and the FileStorage collection. The latter is 
 	Meteor.publish('assets', function() {
 	  return [
 	    Media.find(),
-	    FileStorage.find()
+	    FileStorage.find() // only for GridFS
 	  ];
 	});
-
-
 
 Add the Media collection to Meteor Admin's config:
 
@@ -74,11 +72,7 @@ Add the Media collection to Meteor Admin's config:
       }
     },
 
-
-
-
 ## Usage
-
 
 Add an asset reference to your schema.
 
